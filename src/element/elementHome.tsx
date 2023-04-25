@@ -4,6 +4,8 @@ import image from "../../public/image.png";
 import style from "./elementHome.module.sass";
 import { getWindowSize } from "../components/disSize";
 import {useState} from "react";
+import ResElementTest from "./res/resElementTest";
+import Content from "./IndexTextContent/Content";
 
 const About =
     `
@@ -65,9 +67,7 @@ export default function ElementHome({children}: any) {
                     <h1 style={{
                         margin: `0px ${w}px 0 ${w}px`,
                     }}>
-                        projectV is a metaverse & web3 project that aims to create a new world through<wbr/>
-                        the fusion of the real and virtual worlds <wbr/>
-                        by VARIUS<wbr/>
+                        <Content />
                     </h1>
                 </div>
                 <div style={{
@@ -86,8 +86,8 @@ export default function ElementHome({children}: any) {
                 </div>
                 <p>{date.date}</p>
                 <div>
-                    {height}px
                     {width}px
+                    {height}px
                 </div>
                 <div style={{
                     height: 150

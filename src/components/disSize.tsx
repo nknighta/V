@@ -8,6 +8,7 @@ export const getWindowSize = () => {
 
     useEffect(() => {
         if (typeof window !== "undefined") {
+
             const handleResize = () => {
                 setWindowSize({
                     width:

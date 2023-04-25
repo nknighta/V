@@ -1,20 +1,23 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import {Html, Head, Main, NextScript} from 'next/document'
 //import style from './docs.module.sass'
 import version from '../../package.json'
 import Link from "next/link";
 import {useState} from "react";
-export default function Document({ title = "| project V", description = "This is Photo Application!!!!" }) {
-    const [date]= useState({
+
+export default function Document({title = "| project V", description = "This is Photo Application!!!!"}) {
+    const [date] = useState({
         date: new Date().getFullYear(),
     });
     return (
         <Html>
             <Head/>
-            <div style={{backgroundColor: "#000",
+            <div style={{
+                backgroundColor: "#000",
                 color: "#fff",
                 padding: 20,
                 display: "flex",
-                alignItems: "center"}}>
+                alignItems: "center"
+            }}>
                 <div style={{
                     width: "50%",
                 }}>
@@ -32,27 +35,30 @@ export default function Document({ title = "| project V", description = "This is
                 }}>
                     <h2>v - {version.version}</h2>
                     <span style={{margin: 20}}> </span>
-                    <button style={{
-                        width: 110,
-                        height: 44,
-                        borderRadius: 10
-                    }}>aaa</button>
+                    <Link href={"/account/create"}
+                          style={{
+                                color: "#fff",
+                              fontSize: 24,
+                          }}
+                    >JOIN NOW</Link>
                 </div>
             </div>
             <header>
             </header>
-            <body style={{backgroundColor: "#000",color: "#fff"}}>
-            <Main />
-            <NextScript />
+            <body style={{backgroundColor: "#000", color: "#fff"}}>
+            <Main/>
+            <NextScript/>
             <div style={{
                 backgroundColor: "#000",
                 color: "#fff",
                 padding: 34,
             }}>
-                <div style={{width: "100%",
+                <div style={{
+                    width: "100%",
                     display: "flex",
                     justifyContent: "center",
-                    alignItems: "center"}}>
+                    alignItems: "center"
+                }}>
                     <p>@ 2023 - {date.date} - VARIUS dev team / Nknight AMAMIYA</p>
                 </div>
                 <br/>
