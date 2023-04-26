@@ -1,0 +1,10 @@
+.env/
+.next/
+.idea/
+node_modules
+bat/
+dist/
+
+next-env.d.ts
+*.log
+*.lock
