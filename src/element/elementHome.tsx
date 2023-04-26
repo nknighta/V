@@ -1,12 +1,13 @@
 import NextImage from "next/image";
 import HMeta from "../components/headerMeta";
-import image from "../../public/image.png";
+//import image from "../../public/image.png";
 import style from "./elementHome.module.sass";
 import { getWindowSize } from "../components/disSize";
 import {useState} from "react";
 import ResElementTest from "./res/resElementTest";
 import Content from "./IndexTextContent/Content";
 import {TextContent} from "./textContent";
+import Image from "next/image";
 
 const About =
     `
@@ -36,10 +37,7 @@ export default function ElementHome({children}: any) {
             }}>
                 <div className={style.Main}>
                     <div>
-                        <NextImage src={image}
-                                   alt={"test image naaa"}
-                                   width={900}
-                                   height={500}/>
+                        <Image src={"/image.png"} alt={"OHH"} width={800} height={300}/>
                     </div>
                     <div className={style.Inner} style={{
                         color: "#000",
@@ -68,6 +66,7 @@ export default function ElementHome({children}: any) {
                     <h1 style={{
                         margin: `0px ${w}px 0 ${w}px`,
                     }}>
+                        <h1>これは日本語翻訳版です。</h1>
                         <Content />
                     </h1>
                 </div>
