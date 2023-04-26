@@ -6,6 +6,7 @@ import { getWindowSize } from "../components/disSize";
 import {useState} from "react";
 import ResElementTest from "./res/resElementTest";
 import Content from "./IndexTextContent/Content";
+import {TextContent} from "./textContent";
 
 const About =
     `
@@ -88,6 +89,8 @@ export default function ElementHome({children}: any) {
                 <div>
                     {width}px
                     {height}px
+                    <p>
+                    </p>
                 </div>
                 <div style={{
                     height: 150

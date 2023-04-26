@@ -4,6 +4,11 @@ import version from '../../package.json'
 import Link from "next/link";
 import {useState} from "react";
 
+function DocumentLink(props: any) {
+    let subprops = props.color;
+    return <Link href={props.href} style={{textDecoration: "none", color: subprops}}>{props.text}</Link>
+}
+
 export default function Document({title = "| project V", description = "This is Photo Application!!!!"}) {
     const [date] = useState({
         date: new Date().getFullYear(),
@@ -37,7 +42,7 @@ export default function Document({title = "| project V", description = "This is 
                     <span style={{margin: 20}}> </span>
                     <Link href={"/account/create"}
                           style={{
-                                color: "#fff",
+                              color: "#fff",
                               fontSize: 24,
                           }}
                     >JOIN NOW</Link>
@@ -46,43 +51,28 @@ export default function Document({title = "| project V", description = "This is 
             <header>
             </header>
             <body style={{backgroundColor: "#000", color: "#fff"}}>
+            {/*there is Main content*/}
             <Main/>
             <NextScript/>
+            {/*there is footer*/}
             <div style={{
-                backgroundColor: "#000",
-                color: "#fff",
-                padding: 34,
+                display: "flex",
+                backgroundColor: "#fff",
+                color: "#000",
+                height: "auto",
             }}>
-                <div style={{
-                    width: "100%",
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}>
-                    <p>@ 2023 - {date.date} - VARIUS dev team / Nknight AMAMIYA</p>
-                </div>
-                <br/>
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    padding: 20
-                }}>
-                    <p>other links</p>
-                </div>
-                <div style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    padding: 20,
-                    height: 300
-                }}>
-                    <div>
-                        a
-                    </div>
-                </div>
+                a
+            </div>
+            <div style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center"
+            }}>
+                <p>@ 2023 - {date.date} - VARIUS dev team / Nknight AMAMIYA</p>
             </div>
             </body>
         </Html>
     )
 }
+
