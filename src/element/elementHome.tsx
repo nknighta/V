@@ -7,6 +7,7 @@ import {useState} from "react";
 import ResElementTest from "./res/resElementTest";
 import Content from "./IndexTextContent/Content";
 import {TextContent} from "./textContent";
+import PrismaElement from "../components/PrismaElement";
 
 const About =
     `
@@ -85,6 +86,7 @@ export default function ElementHome({children}: any) {
                 }}>
                     <h1>{About}</h1>
                 </div>
+                <PrismaElement />
                 <p>{date.date}</p>
                 <div>
                     {width}px
