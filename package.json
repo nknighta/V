@@ -3,16 +3,17 @@
   "version": "0.5.1",
   "description": "",
   "type": "commonjs",
-  "main": "./dist/server/server.js",
+  "main": "./dist/src/server/server.js",
   "scripts": {
-    "start": "tsc -p tsconfig.server.json && cross-env NODE_ENV=development node ./dist/server/server.js",
+    "start": "tsc -p tsconfig.server.json && cross-env NODE_ENV=development node ./dist/src/server/server.js",
     "pre-build": "tsc -p tsconfig.server.json",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "prisma": "npx prisma studio "
+    "prisma": "npx prisma studio",
+    "service" : "npx prisma db push --preview-feature && npm run pre-build && npm run start"
   },
   "keywords": [],
-  "author": "nknight_amamiya <n.knight.pc0627@gmail.com> (https://npm.pkg.github.com/nknight_amamiya)",
-  "license": "MIT",
+  "author": "nknight_amamiya <n.knight.pc0627@gmail.com>",
+  "license": "ISC",
   "dependencies": {
     "@chakra-ui/react": "^2.6.0",
     "@emotion/react": "^11.10.6",

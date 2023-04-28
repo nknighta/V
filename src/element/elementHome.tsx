@@ -1,13 +1,13 @@
 import NextImage from "next/image";
 import HMeta from "../components/headerMeta";
-import image from "../../public/image.png";
+import Image from "next/image";
 import style from "./elementHome.module.sass";
 import { getWindowSize } from "../components/disSize";
 import {useState} from "react";
 import ResElementTest from "./res/resElementTest";
 import Content from "./IndexTextContent/Content";
 import {TextContent} from "./textContent";
-import PrismaElement from "../components/PrismaElement";
+//import PrismaElement from "../components/PrismaElement";
 
 const About =
     `
@@ -37,10 +37,7 @@ export default function ElementHome({children}: any) {
             }}>
                 <div className={style.Main}>
                     <div>
-                        <NextImage src={image}
-                                   alt={"test image naaa"}
-                                   width={900}
-                                   height={500}/>
+                        <Image src={"/image.png"} width={width} height={height} alt={"Logo"}/>
                     </div>
                     <div className={style.Inner} style={{
                         color: "#000",
@@ -86,7 +83,6 @@ export default function ElementHome({children}: any) {
                 }}>
                     <h1>{About}</h1>
                 </div>
-                <PrismaElement />
                 <p>{date.date}</p>
                 <div>
                     {width}px
