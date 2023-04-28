@@ -25,6 +25,8 @@ const PrismaSendData = () => {
             setError(err);
         }
     };
+
+    return <PrismaSendData/>
 }
 
 // fix git commiting source code.
