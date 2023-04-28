@@ -1,35 +1,29 @@
-import {prisma} from "./prisma";
-import {useState} from "react";
-import {Prisma} from "@prisma/client";
+import React, {useState} from "react";
+// import Layout from "../components/layout";
+import {useRouter} from "next/router";
+import {createInsertedHTMLStream} from "next/dist/server/node-web-streams-helper";
 
-type dbq = {
-    id: number,
-    name: string,
-    email: string,
+export default function PrismaElementIndex () {
+
 }
-export default function PrismaElement() :JSX.Element{
-    async function getPosts() {
-        const posts = await prisma.user.findMany({
-            where: {id:3},
-            select: {
-                name: true,
-                email: true,
-            }
-        })
-        return posts
-    }
 
-    return (
-        <div>
-            <h1>Prisma</h1>
-            <ul>
-                {posts.map(post => (
-                    <li key={post.id}>
-                        <h2>{post.email}</h2>
-                        <p>{post.name}</p>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
+const PrismaSendData = () => {
+    const [data, setData] = useState({});
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(false);
+    const Router = useRouter();
+    const sendData = async (e: React.SyntheticEvent) => {
+        e.preventDefault();
+        try{
+            const res = await fetch('/api/prisma', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
+            await Router.push('/api/prisma');
+        }
+        catch (err) {
+            setError(err);
+        }
+    };
 }
