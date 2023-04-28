@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 // import Layout from "../components/layout";
 import {useRouter} from "next/router";
-import {createInsertedHTMLStream} from "next/dist/server/node-web-streams-helper";
 
 export default function PrismaElementIndex () {
 
@@ -9,8 +8,8 @@ export default function PrismaElementIndex () {
 
 const PrismaSendData = () => {
     const [data, setData] = useState({});
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
+    //const [loading, setLoading] = useState(false);
+    const [error ,setError] = useState(false);
     const Router = useRouter();
     const sendData = async (e: React.SyntheticEvent) => {
         e.preventDefault();
@@ -27,3 +26,5 @@ const PrismaSendData = () => {
         }
     };
 }
+
+// fix git commiting source code.
