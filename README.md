@@ -2,7 +2,9 @@
 # Welcome
 all new metaverse coding, creating, and change lifestyle.
 > File and API system heavily modified version.
-> Version Number v0.4.47_Canary_sub1/build:00001
+
+# now version
+> v0.5.2_Canary2/build:00033f
 
 ## What's this?
  - App API
@@ -26,9 +28,6 @@ all new metaverse coding, creating, and change lifestyle.
 ### hosting by
 ![image](https://user-images.githubusercontent.com/88763245/227477885-85f92eb1-e6d0-4713-bd7b-d9dcce34085f.png)
 ![osdn_logo](https://user-images.githubusercontent.com/88763245/227475348-36363766-dd2b-4475-b4e7-7ac410c0fb61.png)
-
-# future Loadmap
-> now Prisma implementation in progress...(X_X;;)
 
 # Project Funders & Developers Wanted
 
