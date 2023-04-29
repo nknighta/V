@@ -1,10 +1,15 @@
+# dir
 .next/
 .idea/
 node_modules
 bat/
 dist/
 prisma/
+.vscode/
+http/
 
+# files
+.deoloyment
 next-env.d.ts
 *.log
 *.lock
