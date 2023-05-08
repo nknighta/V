@@ -1,100 +1,56 @@
-import NextImage from "next/image";
 import HMeta from "../components/headerMeta";
-import Image from "next/image";
-import style from "./elementHome.module.sass";
-import { getWindowSize } from "../components/disSize";
+//import { getWindowSize } from "../components/disSize";
 import {useState} from "react";
-import ResElementTest from "./res/resElementTest";
-import Content from "./IndexTextContent/Content";
-import {TextContent} from "./textContent";
-//import PrismaElement from "../components/PrismaElement";
-
+import NextLink from "next/link";
 const About =
     `
     About VARIUS?
     `;
 
-
-
 export default function ElementHome({children}: any) {
-    const {height, width} = getWindowSize();
-    // must chege bg and text color then release
-    const Devmode = process.env.NEXT_PUBLIC_TEST === 'DEV' ? "#000" : "#fff";
-    const DevmodeBack = process.env.NEXT_PUBLIC_TEST === 'DEV' ? "#fff000" : "#000";
-    const textcontent = `AWESOME METAVERSE\n team VARIUS`
-    const w = 50;
     const [date]= useState({
         date: new Date().getFullYear(),
     });
     // {(date:number
     return (
         <div>
-            <HMeta pageTitle={"Welcome to projectV"}/>
+            <HMeta pageTitle={"Home"}/>
             {children}
-            <div style={{
-                backgroundColor: "#000",
-                color: "#fff",
-            }}>
-                <div className={style.Main}>
-                    <div>
-                        <Image src={"/image.png"} width={width} height={height} alt={"Logo"}/>
-                    </div>
-                    <div className={style.Inner} style={{
-                        color: "#000",
-                        width: "100%",
-                        height: "100%",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        whiteSpace: "pre-wrap",
-                    }}>
-                        <h1>{textcontent}</h1>
-                    </div>
-                </div>
-                <div style={{
-                    height: 150
-                }}>
-                    {/*space*/}
-                </div>
-                <div style={{
+            <div
+                style={{
                     display: "flex",
+                    height: "35em",
+                    backgroundColor: "#fff",
+                    color: "#000",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: 50,
-                    whiteSpace: "pre-wrap",
-                }}>
-                    <h1 style={{
-                        margin: `0px ${w}px 0 ${w}px`,
-                    }}>
-                        <Content />
-                    </h1>
-                </div>
-                <div style={{
-                    height: 250
-                }}>
-                    {/*space*/}
-                </div>
-                <div style={{
+                    padding: "50px",
+                }}
+            >
+                <h1 style={{
+                    fontSize: "2.61em",
+                }}>Released projectV Beta 1 !!</h1>
+            </div>
+            <div
+                style={{
                     display: "flex",
+                    height: "1em",
+                    backgroundColor: "#fff",
+                    color: "#000",
                     justifyContent: "center",
                     alignItems: "center",
-                    height: 50,
-                    whiteSpace: "pre-wrap",
-                }}>
-                    <h1>{About}</h1>
-                </div>
-                <p>{date.date}</p>
-                <div>
-                    {width}px
-                    {height}px
-                    <p>
-                    </p>
-                </div>
-                <div style={{
-                    height: 150
-                }}>
-                    {/*space*/}
-                </div>
+                    padding: "10px",
+                }}
+            >
+                <h2 style={{
+                    fontSize: "1.5em",
+                    paddingBottom: 50
+                }}>Join the Beta Program</h2>
+            </div>
+            <div>
+                <NextLink href={"/test"}>
+                    Test Page here
+                </NextLink>
             </div>
         </div>
     )

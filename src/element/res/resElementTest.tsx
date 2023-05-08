@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from "react";
 import {getWindowSize} from "../../components/disSize";
 
-export default function ResElementTest ({children}:any) {
+export default function ResElement ({children}:any) {
     const {width} = getWindowSize();
     const [debugColor]= useState({backcolor: ""})
     const [debugDisp]= useState({disp: ""});
@@ -23,17 +23,13 @@ export default function ResElementTest ({children}:any) {
         <div style={{
             backgroundColor: debugColor.backcolor,
             display: debugDisp.disp,
+            whiteSpace: "pre-wrap",
         }}>
-            <h1>{returnMode.p}</h1>
-            <div style={{backgroundColor: "yellow",color: "black"}}>
-                aiaia
-            </div>
-            <div style={{backgroundColor: "yellow",color: "black"}}>
-                aiaia
-            </div>
-            <div style={{backgroundColor: "yellow",color: "black"}}>
-                aiaia
-            </div>
+            <h1 style={{
+                margin: `0px`,
+            }}>
+                projectV<wbr/>
+            </h1>
         </div>
     )
 }

@@ -1,9 +1,12 @@
 .next/
+.github/
 .idea/
+.vscode/
 node_modules
 bat/
 dist/
 prisma/
+http/
 
 next-env.d.ts
 *.log
