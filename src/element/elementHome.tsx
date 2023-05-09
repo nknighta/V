@@ -2,6 +2,7 @@ import HMeta from "../components/headerMeta";
 //import { getWindowSize } from "../components/disSize";
 import {useState} from "react";
 import NextLink from "next/link";
+
 const About =
     `
     About VARIUS?
@@ -50,6 +51,7 @@ export default function ElementHome({children}: any) {
             <div>
                 <NextLink href={"/test"}>
                     Test Page here
+                
                 </NextLink>
             </div>
         </div>
