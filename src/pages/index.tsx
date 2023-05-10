@@ -1,5 +1,11 @@
-import ElementHome from '../element/elementHome';
+import DynamicElement from "../element/head/dynamic";
+import HMeta from "../components/headerMeta";
 
 export default function Index () {
-    return<ElementHome/>
+    return(
+        <div>
+            <HMeta pageTitle={""} imgUrl={"/favicon.ico"}/>
+            <DynamicElement />
+        </div>
+    )
 }
