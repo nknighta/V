@@ -2,7 +2,7 @@ import {Html, Head, Main, NextScript} from 'next/document'
 //import style from './docs.module.sass'
 import NextLink from "next/link";
 import {useState} from "react";
-import HeadElement from "../element/head/head";
+import HeaderElement from "../element/head/default";
 
 export default function Document({title = "| roject V", description = "This is Photo Application!!!!"}) {
     const [date] = useState({
@@ -10,10 +10,9 @@ export default function Document({title = "| roject V", description = "This is P
     });
     return (
         <Html>
-            <Head>
-                <HeadElement/>
-            </Head>
+            <Head/>
             <body style={{backgroundColor: "#000",color: "#fff"}}>
+                <HeaderElement/>
                 <Main/>
                 <NextScript />
             </body>

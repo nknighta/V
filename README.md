@@ -4,7 +4,7 @@ all new metaverse coding, creating, and change lifestyle.
 > File and API system heavily modified version.
 
 # now version
-> v0.5.2_Canary2/build:00033f
+> v0.5.4_Beta2 / build:00046f2
 
 ## What's this?
  - App API
